@@ -19,6 +19,8 @@ gem 'jquery-rails'
 gem 'devise-bootstrap-views', '~> 0.0.11'
 gem "therubyracer"
 gem "less-rails"
+gem 'stock_quote'
+gem 'iex-ruby-client'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
