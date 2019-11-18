@@ -16,7 +16,7 @@ class StocksController < ApplicationController
     else
       respond_to do |format|
         flash.now[:danger] = "You have entered an empty search string"
-        format.js { render partial: 'users/result' }
+        format.js { render partial: 'users/result' } 
       end
     end
   end
