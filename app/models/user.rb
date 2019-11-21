@@ -5,6 +5,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  has_many :friendships
+  has_many :friends, through: :friendships
 
   def full_name
     return "#{first_name} #{last_name}".strip if (first_name || last_name)
