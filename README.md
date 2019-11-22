@@ -1,24 +1,52 @@
-# README
+# Ruby on Rails  - Stock Tracker Social Media
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The main goal of this project is to build an application similar to a social media for people who follows stocks using:
 
-Things you may want to cover:
+* Ruby on Rails 5.2.3
+* Bootstrap-Sass 
+* Devise
+* Stock Quote
 
-* Ruby version
+## Live Version
 
-* System dependencies
+[Heroku](https://stock-tracker-social-media-app.herokuapp.com/users/sign_in)
 
-* Configuration
+## Features
 
-* Database creation
+* Users
+  * Sign-up / login / logout 
+  * Show profile page with user's stocks
+  * Add and delete Stocks
+  * Has many stocks
+  * Has many friendships
 
-* Database initialization
+* Stocks 
+  * Has many users (tracking)
 
-* How to run the test suite
+* Friendships
+  * Add and delete friends
+  * Belongs to user
+  * Belongs to friend
 
-* Services (job queues, cache servers, search engines, etc.)
+## Getting started
 
-* Deployment instructions
+To get started with the app, clone the repo and then install the needed gems:
 
-* ...
+```
+$ bundle install --without production
+```
+
+Next, migrate the database:
+
+```
+$ rails db:migrate
+```
+
+You are be ready to run the app in a local server:
+
+```
+$ rails server
+```
+
+For more information, see the
+[The Complete Ruby on Rails Developer Course](https://www.udemy.com/course/the-complete-ruby-on-rails-developer-course/).
