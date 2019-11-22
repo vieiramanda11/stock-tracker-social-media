@@ -49,6 +49,9 @@ class User < ApplicationRecord
 
   def self.matches(field_name, param)
     User.where("#{field_name} like?", "%#{param}%") #try this on the console to see, change field_name to email, first_name, last_name
-    
+  end
+
+  def except_current_user(users)
+    users.reject{ |user| user.id == self.id }
   end
 end
