@@ -46,4 +46,9 @@ class User < ApplicationRecord
   def self.email_matches(param)
     matches('email', param)
   end
+
+  def self.matches(field_name, param)
+    User.where("#{field_name} like?", "%#{param}%") #try this on the console to see, change field_name to email, first_name, last_name
+    
+  end
 end
